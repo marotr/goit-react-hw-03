@@ -27,7 +27,7 @@ const App =() => {
     
   };
   const deleteContact = (contactId) => {
-     console.log('Deleting contact with ID:', contactId); // Debugging log
+    
     setContacts((prevContact) => {
       
       return prevContact.filter((contact) => contact.id !== contactId);

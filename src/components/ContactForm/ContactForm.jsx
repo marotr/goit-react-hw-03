@@ -1,6 +1,6 @@
 
 import { Formik as Formik, Form , Field, ErrorMessage} from "formik"
-
+import css from './ContactForm.module.css'
 import { useId } from "react"
 import * as Yup from "yup";
 const validationSchema = Yup.object().shape({
@@ -32,14 +32,14 @@ phone: Yup.string().min (3, 'Minimum 3 symbols ').max(50, 'Maximum 50 symbols').
           actions.resetForm();
         }}
       validationSchema={validationSchema}>
-        <Form >
-          <label htmlFor={nameFieldId}>Name</label>
-          <Field type="text" name="name" id={nameFieldId} />
+        <Form className={css.form }>
+          <label className={css.label }htmlFor={nameFieldId}>Name</label>
+          <Field  className={css.input }type="text" name="name" id={nameFieldId} />
           <ErrorMessage name='name' component='span' />
-          <label htmlFor={phoneFieldId}>Number</label>
-          <Field type="tel" name="phone" id={phoneFieldId} />
+          <label className={css.label }htmlFor={phoneFieldId}>Number</label>
+          <Field className={css.input } type="tel" name="phone" id={phoneFieldId} />
           <ErrorMessage name='phone' component='span' />
-          <button type="submit">Add contact</button>
+          <button className={css.submitBtn } type="submit">Add contact</button>
         </Form>
       </Formik>
     )

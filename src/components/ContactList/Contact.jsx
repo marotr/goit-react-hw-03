@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 const Contact = ({ data:{ name, number, id}, onDelete }) => {
  
   return (
-    <li >
+    <li className={css.contactContainer}>
       <div className={css.contact}>
         <div><p><IoPerson />  {name}</p>
         <p><FaPhoneAlt />  {number}</p></div>
