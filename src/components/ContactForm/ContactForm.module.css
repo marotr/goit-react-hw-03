@@ -19,3 +19,7 @@
 .submitBtn {
   align-self: center;
 }
+.ErrorMessage {
+  color: brown;
+  font-weight: bold;
+}
